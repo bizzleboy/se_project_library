@@ -7,7 +7,7 @@
   font-size: 16px;
   line-height: 20px;
 }
-header {
+.header {
   height: 100vh;
   min-height: 720px;
   max-height: 800px;
@@ -18,7 +18,7 @@ header {
   box-sizing: border-box;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,7 @@ nav {
   list-style: none;
   padding-left: 0;
   margin-top: 8px;
+  margin-bottom: 0;
   align-items: center;
   column-gap: 20px;
 }
@@ -65,7 +66,7 @@ nav {
 
 .header__image {
   max-width: 636px;
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   top: 135px;
   right:20px;
@@ -122,12 +123,13 @@ nav {
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
 .staff__wrapper{
-  max-width: 768px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-wrap:wrap;
   gap:40px;
   justify-content: center;
+  padding: 0;
 
 }
 .card {
@@ -338,14 +340,14 @@ nav {
   padding: 0;
   margin: 100px 0 0;
   display: flex;
-  flex-basis: 220px;
+
   gap:40px;
   justify-content: center;
   /* Add styles */
 }
 
 .step {
-  width:220px;
+  flex-basis: 220px;
 }
 
 .step__title {
@@ -387,7 +389,7 @@ nav {
 
 .about__content {
   position: relative;
-  left:120px;
+  padding-left:120px;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
@@ -399,6 +401,9 @@ nav {
   margin-top: 0px;
   margin-bottom: 32px;
 
+}
+.about__paragraph:last-child{
+  margin-bottom: 0;
 }
 
 .about__circle {
@@ -413,7 +418,7 @@ nav {
 
 }
 
-footer {
+.footer {
   box-sizing: border-box;
   background-color:#1f1f1f ;
   color:#fff;
@@ -422,10 +427,16 @@ footer {
 
 
 }
+.footer__column{
+  display: flex;
+  flex-direction: column;
+  margin-right:auto;
+}
 
 .footer__columns {
   display: flex;
   line-height: 16px;
+  font-size: 16px;
 
 
 
@@ -442,7 +453,7 @@ footer {
 .footer__logo {
   width:116px;
   height: 21px;
-  margin-right:auto;
+
 }
 
 .footer__list {
@@ -450,7 +461,6 @@ footer {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-top: 4px;
 }
 
 .footer__list-item {
@@ -459,6 +469,10 @@ footer {
 }
 
 .footer__column-heading {
+  margin: 0;
+  line-height: 16px;
+  font-size: 16px;
+  padding-bottom: 20px;
 }
 
 .footer__column-link {
@@ -473,9 +487,10 @@ footer {
 .footer__social-icon {
   width: 16px;
   height: 16px;
+  padding-right: 10px;
 }
 
 .footer__copyright {
-  margin-bottom: 60px;
-  margin-right: 80px;
+margin-top: 80px;
+margin-bottom: 0;
 }

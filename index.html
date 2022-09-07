@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practicum Library</title>
-    <link
-      rel="stylesheet"
-      href="/Users/parkerbrandt/Downloads/se_project_library/normalize.css"
-    />
+    <link rel="stylesheet" href="se_project_library/vendor/normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
     <div class="page">
       <!-- Wrap the entire page content in a new div with the page class. Remember to add the closing tag -->
-      <header>
-        <nav>
+      <header class="header">
+        <nav class="nav">
           <img
             src="./images/logo.png"
             alt="Practicum Library Logo"
@@ -170,49 +167,50 @@
           <!-- Start creating the composition here -->
           <div class="events__cover">
             <img src="images/cafe.png" alt="Event Cafe" class="events__image" />
-            <div class="person person_name_feynman">
-              <p class="person__caption">Joan Feynman</p>
+
+            <figure class="person person_name_feynman">
+              <figcaption class="person__caption">Joan Feynman</figcaption>
               <img
                 src="images/person_feynman.png"
                 alt="this be joan feynman"
                 class="person__image person__image_size_l"
               />
-            </div>
-            <div class="person person_name_burbidge">
-              <p class="person__caption">Margaret Burbidge</p>
+            </figure>
+            <figure class="person person_name_burbidge">
+              <figcaption class="person__caption">Margaret Burbidge</figcaption>
               <img
                 src="images/person_burbidge.png"
                 alt="this be burb"
                 class="person__image person__image_size_m"
               />
-            </div>
+            </figure>
 
-            <div class="person person_name_tarter">
-              <p class="person__caption">Jill Tarter</p>
+            <figure class="person person_name_tarter">
+              <figcaption class="person__caption">Jill Tarter</figcaption>
               <img
                 src="images/person_tarter.png"
                 alt="this be tart"
                 class="person__image person__image_size_m"
               />
-            </div>
+            </figure>
 
-            <div class="person person_name_mitchell">
+            <figure class="person person_name_mitchell">
               <img
                 src="images/person_mitchell.png"
                 alt="this be mitch"
                 class="person__image person__image_size_s"
               />
-              <p class="person__caption">Maria Mitchell</p>
-            </div>
+              <figcaption class="person__caption">Maria Mitchell</figcaption>
+            </figure>
 
-            <div class="person person_name_cannon">
+            <figure class="person person_name_cannon">
               <img
                 src="images/person_cannon.png"
                 alt="this be can"
                 class="person__image person__image_size_m"
               />
-              <p class="person__caption">Annie Jump Cannon</p>
-            </div>
+              <figcaption class="person__caption">Annie Jump Cannon</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -295,86 +293,42 @@
           <div class="about__circle"></div>
         </section>
       </main>
-      <footer id="footer">
-        <section class="footer__columns">
-          <div class="footer_column">
-            <svg
+      <footer class="footer">
+        <div class="footer__columns">
+          <div class="footer__column">
+            <img
               class="footer__logo"
-              width="116"
-              height="21"
-              viewBox="0 0 116 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0.292929V20.6515H3.62355V13.3869H5.39041C10.122 13.3869 13.1466 11.2485 13.1466 6.73737C13.1466 2.63636 10.3316 0.292929 5.42035 0.292929H0ZM5.42035 10.6333H3.62355V3.04646H5.54014C8.08561 3.04646 9.46316 4.18889 9.46316 6.73737C9.46316 9.40303 7.93588 10.6333 5.42035 10.6333ZM18.643 11.4535C19.6312 9.66667 21.0986 8.75859 23.2847 8.87576V5.59495C21.2484 5.71212 19.5713 6.91313 18.7328 8.84646H18.643L18.5532 5.91717H15.0793V20.6515H18.643V11.4535ZM36.1264 10.604C36.1264 7.0303 34.2697 5.68283 30.4965 5.68283C28.1307 5.68283 26.274 6.41515 25.1959 7.0303V9.9303C26.1542 9.22727 28.2504 8.46566 30.0772 8.46566C31.7842 8.46566 32.5628 9.05151 32.5628 10.6333V11.4535H31.9938C26.5435 11.4535 24.1178 13.2111 24.1178 16.199C24.1178 19.1869 25.9745 20.8566 28.7296 20.8566C30.8259 20.8566 31.7243 20.1828 32.413 19.4798H32.5628C32.5927 19.8606 32.7125 20.3586 32.8323 20.6515H36.3061C36.1863 19.4505 36.1264 18.2495 36.1264 17.0485V10.604ZM32.5628 17.1364C32.1136 17.7808 31.2751 18.3081 30.0173 18.3081C28.52 18.3081 27.7713 17.4293 27.7713 16.1111C27.7713 14.3828 28.9991 13.7677 32.0537 13.7677H32.5628V17.1364ZM45.0106 20.9444C46.6577 20.9444 47.8256 20.6515 48.694 20.0364V17.1949C47.7956 17.8101 46.7175 18.1909 45.2202 18.1909C42.6747 18.1909 41.6266 16.2576 41.6266 13.2111C41.6266 10.0182 42.9143 8.37778 45.2502 8.37778C46.6277 8.37778 47.9753 8.84646 48.694 9.28586V6.32727C47.9454 5.91717 46.6277 5.62424 44.8609 5.62424C40.309 5.62424 37.9432 8.81717 37.9432 13.299C37.9432 18.2202 40.2491 20.9444 45.0106 20.9444ZM50.3399 5.91717V8.67071H52.2266V16.2283C52.2266 18.9818 53.8138 20.9444 57.1079 20.9444C58.8448 20.9444 59.833 20.5636 59.833 20.5636V17.7222C59.833 17.7222 59.1742 18.1909 57.9763 18.1909C56.479 18.1909 55.7902 17.3414 55.7902 16.2576V8.67071H59.5336V5.91717H55.7902V2.69495H52.2266V5.91717H50.3399ZM64.2155 4.10101C65.3831 4.10101 66.3114 3.3101 66.3114 2.0505C66.3114 0.820202 65.3831 0 64.2155 0C63.0476 0 62.1492 0.820202 62.1492 2.0505C62.1492 3.3101 63.0476 4.10101 64.2155 4.10101ZM62.4487 5.91717V20.6515H66.0119V5.91717H62.4487ZM75.3903 20.9444C77.0374 20.9444 78.2053 20.6515 79.0737 20.0364V17.1949C78.1753 17.8101 77.0972 18.1909 75.5999 18.1909C73.0544 18.1909 72.0063 16.2576 72.0063 13.2111C72.0063 10.0182 73.294 8.37778 75.6299 8.37778C77.0074 8.37778 78.355 8.84646 79.0737 9.28586V6.32727C78.3251 5.91717 77.0074 5.62424 75.2405 5.62424C70.6886 5.62424 68.3229 8.81717 68.3229 13.299C68.3229 18.2202 70.6288 20.9444 75.3903 20.9444ZM89.7028 16.4919C89.044 17.2828 87.9958 17.9566 86.7081 17.9566C85.4504 17.9566 84.8814 17.4293 84.8814 16.3162V5.91717H81.3177V16.6677C81.3177 19.597 82.5156 20.8859 85.4204 20.8859C87.5466 20.8859 88.8044 20.1242 89.5231 19.4212H89.7028L89.7926 20.6515H93.2665V5.91717H89.7028V16.4919ZM99.8288 10.0768C100.488 9.28586 101.386 8.61212 102.674 8.61212C103.931 8.61212 104.351 9.13939 104.351 10.2525V20.6515H107.914V10.0768C108.573 9.28586 109.472 8.61212 110.759 8.61212C112.017 8.61212 112.436 9.13939 112.436 10.2525V20.6515H116V9.90101C116 6.97172 114.952 5.68283 112.047 5.68283C109.741 5.68283 108.364 6.56162 107.525 7.55758C106.956 6.26869 105.758 5.68283 103.812 5.68283C101.685 5.68283 100.727 6.44444 100.008 7.14747H99.8288L99.7389 5.91717H96.2651V20.6515H99.8288V10.0768Z"
-                fill="white"
-              />
-            </svg>
+              src="./images/logo_practicum.svg"
+              alt="practicum logo"
+            />
           </div>
 
-          <div class="footer_column footer__column_content_hours">
+          <div class="footer__column footer__column_content_hours">
             <h2 class="footer__column-heading">Hours</h2>
             <ul class="footer__list">
-              <li class="footer__list-item"><p>Weekdays: 9am - 8pm</p></li>
-              <li class="footer__list-item"><p>Weekends: 10am - 6pm</p></li>
+              <li class="footer__list-item">Weekdays: 9am - 8pm</li>
+              <li class="footer__list-item">Weekends: 10am - 6pm</li>
             </ul>
           </div>
 
-          <div class="footer_column footer__column_content_social">
+          <div class="footer__column footer__column_content_social">
             <h2 class="footer__column-heading">Social Media</h2>
             <ul class="footer__list">
               <li class="footer__list-item">
                 <a href="#" class="footer__column-link">
-                  <svg
-                    class="footer__social-icon"
-                    width="16"
-                    height="16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.836 8.351v4.353H7.035V8.352h-.9v-1.5h.9v-.9C7.035 4.727 7.543 4 8.986 4h1.202v1.5h-.751c-.562 0-.6.21-.6.6l-.001.752h1.36l-.159 1.5H8.836z"
-                      fill="#4F4F4F"
-                    />
-                  </svg>
-                  <p>Facebook</p>
+                  <img class="footer__social-icon" src =
+                  ./images/facebook_white.svg alt="facebook logo"/> Facebook
                 </a>
               </li>
               <li class="footer__list-item">
                 <a href="#" class="footer__column-link">
-                  <svg
-                    class="footer__social-icon"
-                    width="16"
-                    height="16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM6.242 3.759c.455-.02.6-.026 1.76-.026H8c1.159 0 1.304.005 1.759.026.454.02.764.093 1.037.198.28.109.518.255.755.492s.383.475.492.756c.105.271.177.581.199 1.035.02.456.025.601.025 1.76s-.005 1.304-.025 1.759c-.022.454-.094.764-.199 1.035-.109.28-.255.519-.492.756a2.087 2.087 0 0 1-.755.492c-.272.106-.582.178-1.036.199-.455.02-.6.026-1.76.026-1.158 0-1.303-.005-1.758-.026-.455-.021-.765-.093-1.036-.198a2.09 2.09 0 0 1-.756-.493 2.09 2.09 0 0 1-.492-.756c-.105-.271-.177-.581-.198-1.035-.02-.455-.026-.6-.026-1.76 0-1.158.005-1.303.026-1.759.02-.454.092-.764.198-1.035.11-.28.255-.519.493-.756a2.09 2.09 0 0 1 .755-.492c.272-.105.582-.177 1.036-.198z"
-                      fill="#4F4F4F"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.615 4.502h.383c1.139 0 1.274.004 1.724.025.416.019.642.088.792.147.2.077.341.17.49.319.15.15.242.291.32.49.058.15.128.377.147.793.02.45.024.584.024 1.723 0 1.139-.004 1.274-.024 1.724-.02.416-.089.641-.147.792-.078.199-.17.34-.32.49a1.32 1.32 0 0 1-.49.319c-.15.059-.376.128-.792.147-.45.02-.585.025-1.724.025-1.14 0-1.275-.005-1.724-.025-.416-.02-.642-.089-.793-.147-.199-.078-.34-.17-.49-.32a1.323 1.323 0 0 1-.32-.49c-.058-.15-.128-.376-.146-.792-.02-.45-.025-.585-.025-1.724 0-1.14.004-1.274.025-1.724.019-.416.088-.641.146-.792.078-.199.17-.341.32-.49.15-.15.291-.242.49-.32.15-.058.377-.128.793-.147.393-.018.546-.023 1.341-.024v.001zm2.66.709a.512.512 0 1 0 0 1.024.512.512 0 0 0 0-1.024zM5.807 8a2.191 2.191 0 1 1 4.382 0 2.191 2.191 0 0 1-4.382 0z"
-                      fill="#4F4F4F"
-                    />
-                    <path
-                      d="M8 6.578a1.422 1.422 0 1 1 0 2.844 1.422 1.422 0 0 1 0-2.844z"
-                      fill="#4F4F4F"
-                    />
-                  </svg>
-                  <p>Instagram</p>
+                  <img class="footer__social-icon" src =
+                  ./images/instagram_white.svg alt="insta logo"/> Instagram
                 </a>
               </li>
             </ul>
           </div>
-        </section>
+        </div>
         <p class="footer__copyright">© 2022 Parker Brandt</p>
       </footer>
     </div>
