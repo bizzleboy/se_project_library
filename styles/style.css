@@ -118,7 +118,7 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
-  margin: 24px 0 0;
+  margin: 24px 0 68px;
 }
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
@@ -448,6 +448,7 @@
 }
 
 .footer__column_content_social {
+  margin-right: 102px;
 }
 
 .footer__logo {
@@ -466,7 +467,10 @@
 .footer__list-item {
   position: relative;
 
+  margin-bottom: 16px;
 }
+
+
 
 .footer__column-heading {
   margin: 0;
@@ -482,6 +486,10 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+
+.footer__column-link:hover {
+  color: #c1c1c1;
 }
 
 .footer__social-icon {
